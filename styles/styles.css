@@ -1,0 +1,120 @@
+body {
+  margin: 0;
+}
+
+.page-host {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50px;
+    bottom: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+@media print
+{
+  .page-host {
+    position: absolute;
+    left: 10px;
+    right: 0;
+    top: 50px;
+    bottom: 0;
+    overflow-y: inherit;
+    overflow-x: inherit;
+  }
+}
+
+.navbar-nav li.loader {
+    margin: 12px 24px 0 6px;
+}
+
+/* animate page transitions */
+section.au-enter-active {
+  -webkit-animation: fadeInRight 1s;
+  animation: fadeInRight 1s;
+}
+
+div.au-stagger {
+  /* 50ms will be applied between each successive enter operation */
+  -webkit-animation-delay:50ms;
+  animation-delay:50ms;
+}
+
+div.container {
+    margin-top: 20px;
+    padding-left: 0px;
+    width: 85%;
+}
+
+.gametitle {
+  background-color:darkgreen; 
+  color: white;
+}
+
+.achievementtrophy {
+  font-size: 20px; 
+  float:left; 
+  color: gold; 
+  margin-right: 5px;
+}
+
+.achievementtracker {
+  text-align: center;
+}
+
+div.container .tab-pane {
+    -webkit-box-shadow: 0px 3px 4px 2px rgba(0,0,0,0.4);
+    -moz-box-shadow: 0px 3px 4px 2px rgba(0,0,0,0.4);
+    box-shadow: 0px 3px 4px 2px rgba(0,0,0,0.4);
+    padding: 10px;
+}
+
+
+/* animation definitions */
+@-webkit-keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0)
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    -ms-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0)
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none
+  }
+}
+
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

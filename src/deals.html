@@ -1,0 +1,25 @@
+<template>
+	<require from="./currency-converter"></require>
+	
+	<div style="width: 500px;">
+		<div>
+			<div>${dealManager.currentDeals}</div>
+			<table class="table table-striped table-bordered" if.bind="dealManager.deals.length > 0">
+				<thead>
+					<tr>
+						<th>Store</th>
+						<th>Item</th>
+						<th>Price</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr repeat.for="deal of dealManager.deals">
+						<td>${deal.store}</td>
+						<td>${deal.item}</td>
+						<td>${deal.price | currency}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</template>

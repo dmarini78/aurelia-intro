@@ -1,0 +1,22 @@
+<template>
+	<div class="panel panel-default" style="width:250px;">
+		<div class="panel-heading">Add A Deal</div>
+		<div class="panel-body">
+			<form>
+				<div class="form-group">
+					<label>Store</label>
+					<input class="form-control" value.bind="store">
+				</div>
+				<div class="form-group">
+					<label>Item</label>
+					<input class="form-control" value.bind="item">
+				</div>
+				<div class="form-group">
+					<label>Price</label>
+					<input class="form-control" value.bind="price">
+				</div>
+				<button class="btn btn-primary" click.trigger="addDeal()">Add Deal</button>
+			</form>
+		</div>
+	</div>
+</template>
