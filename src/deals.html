@@ -1,6 +1,4 @@
 <template>
-	<require from="./currency-converter"></require>
-	
 	<div style="width: 500px;">
 		<div>
 			<div>${dealManager.currentDeals}</div>
@@ -10,6 +8,7 @@
 						<th>Store</th>
 						<th>Item</th>
 						<th>Price</th>
+						<th></th>
 					</tr>
 				</thead>
 				<tbody>
@@ -17,6 +16,7 @@
 						<td>${deal.store}</td>
 						<td>${deal.item}</td>
 						<td>${deal.price | currency}</td>
+						<td><a route-href="route: edit; params.bind: { id: $index}">Edit</a></td>
 					</tr>
 				</tbody>
 			</table>

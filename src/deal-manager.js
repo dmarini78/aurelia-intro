@@ -14,4 +14,12 @@ export class DealManager {
             "price": price
         });
     }
+    
+    editDeal(index, store, item, price) {
+        this.deals[index] = {
+            "store": store,
+            "item": item,
+            "price": price
+        };
+    }
 }
